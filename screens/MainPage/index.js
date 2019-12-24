@@ -23,9 +23,9 @@ export default class MainPage extends Component {
     super(props);
     
     this.state={
-        idUser: '',
-        return: false,
-        listData: [{id: "53627880", name: "Ronaldo Murakami", image: "https://avatars3.githubusercontent.com/u/53627880?v=4", bio: "Iniciante em desenvolvimento mobile com React Native, Node.js e Firebase. Preparando para começar os estudos de matemática. "}]
+      idUser: '',
+      return: false,
+      listData: [{id: "53627880", loginUser: "RonaldoMurakamiK", name: "Ronaldo Murakami", image: "https://avatars3.githubusercontent.com/u/53627880?v=4", bio: "Iniciante em desenvolvimento mobile com React Native, Node.js e Firebase. Preparando para começar os estudos de matemática. "}]
     };
 
     this.addUser = this.addUser.bind(this);
@@ -34,17 +34,13 @@ export default class MainPage extends Component {
   }
 
   async componentDidMount() {
-    //AsyncStorage.setItem("listData", '')
-     AsyncStorage.getItem("listData").then((value) => {
+    AsyncStorage.getItem("listData").then((value) => {
       if(value != null) this.setState({listData: JSON.parse(value)});
-      //alert(JSON.parse(value).length)
-      //alert(JSON.parse(value)[0].name)
     })
-    
   }
 
-  profilePage(){
-    this.props.navigation.navigate('ProfilePage');
+  profilePage(loginUser){
+    this.props.navigation.navigate('ProfilePage', {loginUser: loginUser});
   }
 
   async addUser(){
@@ -59,8 +55,9 @@ export default class MainPage extends Component {
         } 
       }
       if(cont != 1){
-        listData.push({id: response.data.id, name: response.data.name, image: response.data.avatar_url, bio: response.data.bio})
+        listData.push({id: response.data.id, loginUser: response.data.login, name: response.data.name, image: response.data.avatar_url, bio: response.data.bio})
         AsyncStorage.setItem("listData", JSON.stringify(listData));
+        this.textInput.clear();
       } else{
         Alert.alert("Error", "User already added!")
       }
@@ -91,7 +88,7 @@ export default class MainPage extends Component {
         <Text style={styles.name}>{item.name}</Text>
         <Text style={styles.bio}>{item.bio}</Text>
         <View style={styles.profileButtons}>
-          <TouchableOpacity style={styles.profileButton} onPress={this.profilePage}>
+          <TouchableOpacity style={styles.profileButton} onPress={() => this.profilePage(item.loginUser)}>
             <Text style={styles.profileButtonText}>See profile</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.delButton} onPress={() => this.delUser(item.id)}>
@@ -113,7 +110,9 @@ export default class MainPage extends Component {
         <View style={styles.background}>
           <View style={{flexDirection: 'row'}}>
             <TextInput style={styles.input} placeholder="Add new user..."  
-                        onChangeText={(value) => this.setState({idUser: value})}/>
+                       onChangeText={(value) => this.setState({idUser: value})}
+                       ref={input => { this.textInput = input }}
+            />
             <TouchableOpacity style={styles.button} onPress={this.addUser}>
                 <Icon style={styles.icon} name="plus" size={responsiveHeight(3)} color="#1F1D1D"/>
             </TouchableOpacity>
@@ -122,9 +121,10 @@ export default class MainPage extends Component {
           <View style={styles.line}/>
 
           <FlatList 
-              data={this.state.listData}
-              renderItem={({item}) => this.renderData(item)}
-              style={{marginBottom: '21.3%'}}/>
+            data={this.state.listData}
+            renderItem={({item}) => this.renderData(item)}
+            style={{marginBottom: '21.3%'}}
+          />
         </View>
       </SafeAreaView>
     );

@@ -12,14 +12,16 @@ const navigator = createStackNavigator({
     screen: MainPage,
     navigationOptions: { header: null }
   },
+  ProfilePage: {
+    screen: ProfilePage
+  },
   FirstPage: {
     screen: FirstPage, 
     navigationOptions: { header: null }
   },
-  ProfilePage: {
-    screen: ProfilePage,
-    navigationOptions: { headerBackgroundColor: 'yellow' }
-  },
+  ProjectPage: {
+    screen: ProjectPage
+  }
 });
 
 const App = createAppContainer(navigator);
