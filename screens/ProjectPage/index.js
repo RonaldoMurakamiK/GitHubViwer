@@ -3,7 +3,7 @@ import { WebView } from 'react-native-webview';
 
 export default class ProjectPage extends Component {
   static navigationOptions = {
-    title: this.name,
+    title: "Project page",
     headerStyle: {
       backgroundColor: '#1F1D1D',
     },

@@ -12,7 +12,7 @@ import api from '../services/api';
 
 export default class ProfilePage extends Component {
   static navigationOptions = {
-    title: this.name,
+    title: "Profile page",
     headerStyle: {
       backgroundColor: '#1F1D1D',
     },
