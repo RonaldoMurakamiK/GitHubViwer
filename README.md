@@ -14,4 +14,4 @@ Imagem 5 (Tela dos projetos - Projeto 1).<br/>
 Imagem 6 (Tela dos projetos - Projeto 2).<br/><br/>
 
 
-<img src="./screenshots/Screenshot_1577152933.png" width="32%" height="32%"/>       <img src="./screenshots/Screenshot_1577153078.png" width="32%" height="32%"/>      <img src="./screenshots/Screenshot_1577153022.png" width="33%" height="33%"/>      <img src="./screenshots/Screenshot_1577152958.png" width="32%" height="32%"/>      <img src="./screenshots/Screenshot_1577152964.png" width="32%" height="32%"/>
+<img src="./screenshots/Screenshot_1577152933.png" width="32%" height="32%"/>       <img src="./screenshots/Screenshot_1577153078.png" width="32%" height="32%"/>      <img src="./screenshots/Screenshot_1577153022.png" width="32%" height="32%"/>      <img src="./screenshots/Screenshot_1577152952.png" width="32%" height="32%"/>       <img src="./screenshots/Screenshot_1577152958.png" width="32%" height="32%"/>      <img src="./screenshots/Screenshot_1577152964.png" width="32%" height="32%"/>
