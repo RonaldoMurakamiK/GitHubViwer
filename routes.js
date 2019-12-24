@@ -8,16 +8,16 @@ import ProfilePage from './screens/ProfilePage/index';
 import ProjectPage from './screens/ProjectPage/index';
 
 const navigator = createStackNavigator({
+  FirstPage: {
+    screen: FirstPage, 
+    navigationOptions: { header: null }
+  },
   MainPage: {
     screen: MainPage,
     navigationOptions: { header: null }
   },
   ProfilePage: {
     screen: ProfilePage
-  },
-  FirstPage: {
-    screen: FirstPage, 
-    navigationOptions: { header: null }
   },
   ProjectPage: {
     screen: ProjectPage

@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import {
-  SafeAreaView,
-  View,
-  Text,
-  StatusBar,
-  TouchableOpacity
-} from 'react-native';
 import { WebView } from 'react-native-webview';
-import styles from './styles';
-import { loadPartialConfig } from '@babel/core';
 
-export default class ProfilePage extends Component {
-  constructor(props){
-    super(props);
+export default class ProjectPage extends Component {
+  static navigationOptions = {
+    title: this.name,
+    headerStyle: {
+      backgroundColor: '#1F1D1D',
+    },
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      fontColor: 'white'
+    },
+    headerTintColor: 'white'
   }
 
   render() {

@@ -7,9 +7,9 @@ export default StyleSheet.create({
     alignItems: 'center'
   },
   background: {
-      flex: 1,
-      width: '100%',
-      backgroundColor: 'black'
+    flex: 1,
+    width: '100%',
+    backgroundColor: 'black'
   },
   image: {
     height: '43%',

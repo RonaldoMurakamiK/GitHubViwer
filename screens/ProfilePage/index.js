@@ -3,13 +3,10 @@ import {
   SafeAreaView,
   View,
   Text,
-  StatusBar,
   TouchableOpacity,
   Image,
   FlatList
 } from 'react-native';
-import Icon from 'react-native-vector-icons/dist/FontAwesome';
-import { responsiveHeight } from 'react-native-responsive-dimensions';
 import styles from './styles';
 import api from '../services/api';
 
@@ -30,6 +27,7 @@ export default class ProfilePage extends Component {
     super(props);
     this.state={
       listData: '',
+      projectUrl: '',
       name: '',
       image: '',
       bio: ''
@@ -51,8 +49,8 @@ export default class ProfilePage extends Component {
     })
   }
 
-  projectPage(projectUrl){
-    this.props.navigation.navigate('ProjectPage', {projectUrl: projectUrl});
+  projectPage(urlProject){
+    this.props.navigation.navigate('ProjectPage', {ProjectPage: urlProject});
   }
 
   renderData(item) {
