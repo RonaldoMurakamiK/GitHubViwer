@@ -4,7 +4,7 @@
 
 # 📋 ABSTRACT
 <strong>English:</strong> This application was designed for development in relation to consumption of APIs. However, in addition to a growth in consumption mentioned above, it was possible to have clearer notions in the handling of data structured in JSON, in the use of icons and in the use of a web view. <br/><br/>
-<strong>Português: </strongEsta aplicação foi pensada visando o desenvolvimento em relação a consumo de APIs. Entretanto, além de um crescimento no consumo antes citado, foi possível ter noções mais claras no manuseio de dados estruturados em JSON, no uso de icones e na utilização de uma web view. <br/><br/>
+<strong>Português: </strong>Esta aplicação foi pensada visando o desenvolvimento em relação a consumo de APIs. Entretanto, além de um crescimento no consumo antes citado, foi possível ter noções mais claras no manuseio de dados estruturados em JSON, no uso de icones e na utilização de uma web view. <br/><br/>
 
 # 📖 PROJECT DATA
 React Native project consuming the gitHub API to create a user viewer.<br/> 
