@@ -13,11 +13,11 @@ Package: axios, react-navigation, responsive-dimensions, vector-icons, webview e
 React Native version: 0.61.4.<br/><br/>
 
 # 🖼 SCREENSHOTS
-Imagem 1 (Initial screen);<br/>
-Imagem 2 and 3 (Main screen);<br/>
-Imagem 4 (Profile screen);<br/>
-Imagem 5 (Project screen - project 1).<br/>
-Imagem 6 (Project scree - project 2).<br/><br/>
+Image 1 (Initial screen);<br/>
+Image 2 and 3 (Main screen);<br/>
+Image 4 (Profile screen);<br/>
+Image 5 (Project screen - project 1).<br/>
+Image 6 (Project scree - project 2).<br/><br/>
 
 
 <img src="./screenshots/Screenshot_1577152933.png" width="32%" height="32%"/>       <img src="./screenshots/Screenshot_1577153078.png" width="32%" height="32%"/>      <img src="./screenshots/Screenshot_1577153022.png" width="32%" height="32%"/>      <img src="./screenshots/Screenshot_1577152952.png" width="32%" height="32%"/>       <img src="./screenshots/Screenshot_1577152958.png" width="32%" height="32%"/>      <img src="./screenshots/Screenshot_1577152964.png" width="32%" height="32%"/>
